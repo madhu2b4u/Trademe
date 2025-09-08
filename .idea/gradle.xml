@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/listings" />
             <option value="$PROJECT_DIR$/features/profile" />
+            <option value="$PROJECT_DIR$/features/watchlist" />
             <option value="$PROJECT_DIR$/navigation" />
           </set>
         </option>

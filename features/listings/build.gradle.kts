@@ -39,13 +39,6 @@ android {
         kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get()
     }
 
-    packaging {
-        resources {
-            merges += "META-INF/gradle/incremental.annotation.processors"
-            excludes += "META-INF/gradle/incremental.annotation.processors"
-        }
-    }
-
 }
 
 dependencies {
