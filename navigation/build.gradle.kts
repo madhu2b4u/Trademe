@@ -1,23 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.library")
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
     id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.org.trademe"
-    compileSdk = 35
+    namespace = "com.org.trademe.navigation"
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.org.trademe"
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.compileSdk.get().toInt()
-        versionCode = libs.versions.versionCode.get().toInt()
-        versionName = libs.versions.versionName.get()
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -43,6 +38,7 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get()
     }
+
     packaging {
 
         resources {
@@ -52,14 +48,13 @@ android {
 
         }
     }
+
 }
 
 dependencies {
     implementation(project(":core"))
-    implementation(project(":navigation"))
 
     kapt(libs.hilt.compiler)
-
     // Include bundles
     implementation(libs.bundles.androidx.core)
     implementation(libs.bundles.androidx.compose.ui)
@@ -69,5 +64,4 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.coil.compose)
-
 }

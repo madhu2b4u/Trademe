@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Tradme"
 include(":app")
 include(":core")
+include(":navigation")
