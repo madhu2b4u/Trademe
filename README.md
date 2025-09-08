@@ -11,6 +11,11 @@ A modern Android application for TradeMe built with Jetpack Compose, following c
 - **Search**: Find specific listings (coming soon)
 - **Shopping Cart**: Purchase items directly (coming soon)
 
+| Listings | Watchlist | Profile |
+|--------------|---------------|-------------|
+| ![Invoice List](https://github.com/madhu2b4u/Trademe/blob/master/listings.png) | ![Wacthlist](https://github.com/madhu2b4u/Trademe/blob/master/watchlist.png) | ![My Trademe](https://github.com/madhu2b4u/Trademe/blob/master/tradme.png) |
+
+
 ## Architecture
 
 The app follows Clean Architecture principles with these distinct layers:
