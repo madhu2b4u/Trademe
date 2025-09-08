@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">listings</string>
+    <string name="opening_listing">Opening listing: %1$s</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="no_listings_found">No listings found</string>
+    <string name="asking_price">Asking price</string>
+    <string name="current_price">Current price</string>
+    <string name="retry">Retry</string>
+    <string name="error">Error: %1$s</string>
+    <string name="listing_image_for">Listing image for %1$s</string>
+</resources>

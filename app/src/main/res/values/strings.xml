@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Tradme</string>
+    <string name="app_name">TradeMe</string>
+    <string name="latest">Latest</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="my_trade_me">My Trade Me</string>
+    <string name="latest_listings">Latest listings</string>
+    <string name="trade_me">Trade Me</string>
+    <string name="search_functionality_coming_soon">Search functionality coming soon!</string>
+    <string name="cart_functionality_coming_soon">Cart functionality coming soon!</string>
 </resources>

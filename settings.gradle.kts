@@ -23,3 +23,5 @@ rootProject.name = "Tradme"
 include(":app")
 include(":core")
 include(":navigation")
+include(":features:listings")
+include(":features:profile")
