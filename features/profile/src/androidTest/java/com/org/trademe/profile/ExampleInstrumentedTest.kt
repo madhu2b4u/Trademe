@@ -1,4 +1,4 @@
-package com.org.traeme.profile
+package com.org.trademe.profile
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

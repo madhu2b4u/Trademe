@@ -1,7 +1,7 @@
-package com.org.traeme.profile.di
+package com.org.trademe.profile.di
 
 import com.org.trademe.navigation.NavigationProvider
-import com.org.traeme.profile.navigation.ProfileNavigationProvider
+import com.org.trademe.profile.navigation.ProfileNavigationProvider
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.org.traeme.profile
+package com.org.trademe.profile
 
 import org.junit.Test
 
