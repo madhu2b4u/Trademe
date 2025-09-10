@@ -2,7 +2,7 @@ package com.org.trademe.listings
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.org.trademe.listings.data.model.Listing
-import com.org.trademe.listings.domain.LatestListingsUseCase
+import com.org.trademe.listings.domain.MockLatestListingsUseCase
 import com.org.trademe.listings.presentation.LatestListingsViewModel
 import io.mockk.clearAllMocks
 import io.mockk.coEvery
@@ -52,13 +52,13 @@ class LatestListingsViewModelTest {
         )
     )
 
-    private lateinit var mockUseCase: LatestListingsUseCase
+    private lateinit var mockUseCase: MockLatestListingsUseCase
     private lateinit var viewModel: LatestListingsViewModel
 
     @Before
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
-        mockUseCase = mockk<LatestListingsUseCase>()
+        mockUseCase = mockk<MockLatestListingsUseCase>()
     }
 
     @After

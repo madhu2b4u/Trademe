@@ -4,7 +4,7 @@ import com.org.trademe.listings.data.model.Listing
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 
-class MockListingsRepositoryImpl @Inject constructor() : ListingsRepository {
+class MockListingsRepositoryImpl @Inject constructor() : MockListingsRepository {
 
     override suspend fun getLatestListings(): Result<List<Listing>> {
         // Simulate network delay

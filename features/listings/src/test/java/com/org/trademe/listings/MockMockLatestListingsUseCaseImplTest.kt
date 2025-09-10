@@ -1,8 +1,8 @@
 package com.org.trademe.listings
 
 import com.org.trademe.listings.data.model.Listing
-import com.org.trademe.listings.data.repository.ListingsRepository
-import com.org.trademe.listings.domain.LatestListingsUseCaseImpl
+import com.org.trademe.listings.data.repository.MockListingsRepository
+import com.org.trademe.listings.domain.MockLatestListingsUseCaseImpl
 import io.mockk.clearAllMocks
 import io.mockk.coEvery
 import io.mockk.coVerify
@@ -18,17 +18,17 @@ import org.junit.Before
 import org.junit.Test
 
 @OptIn(ExperimentalCoroutinesApi::class)
-class LatestListingsUseCaseImplTest {
+class MockMockLatestListingsUseCaseImplTest {
 
-    private lateinit var repository: ListingsRepository
-    private lateinit var useCase: LatestListingsUseCaseImpl
+    private lateinit var repository: MockListingsRepository
+    private lateinit var useCase: MockLatestListingsUseCaseImpl
     private val testDispatcher = UnconfinedTestDispatcher()
     private val testScope = TestScope(testDispatcher)
 
     @Before
     fun setUp() {
         repository = mockk()
-        useCase = LatestListingsUseCaseImpl(repository)
+        useCase = MockLatestListingsUseCaseImpl(repository)
     }
 
     @After

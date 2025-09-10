@@ -1,7 +1,10 @@
 plugins {
     id("com.android.library")
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -39,9 +42,12 @@ android {
 }
 
 dependencies {
+    kapt(libs.hilt.compiler)
     // Include bundles
     implementation(libs.bundles.androidx.core)
     implementation(libs.bundles.androidx.compose.ui)
+    implementation(libs.bundles.networking)
+    implementation(libs.bundles.hilt)
 
     // Compose BOM and other dependencies
     implementation(platform(libs.androidx.compose.bom))
