@@ -9,4 +9,5 @@ object NavigationRoutes {
     const val LISTING_ROUTE = "listings"
     const val WATCHLIST_ROUTE = "watchlist"
     const val PROFILE_ROUTE = "profile"
+    const val TODO_ROUTE = "todo"
 }

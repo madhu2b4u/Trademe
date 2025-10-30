@@ -43,11 +43,13 @@ android {
 
 dependencies {
     kapt(libs.hilt.compiler)
+    kapt(libs.androidx.room.compiler)
     // Include bundles
     implementation(libs.bundles.androidx.core)
     implementation(libs.bundles.androidx.compose.ui)
     implementation(libs.bundles.networking)
     implementation(libs.bundles.hilt)
+    implementation(libs.bundles.room)
 
     // Compose BOM and other dependencies
     implementation(platform(libs.androidx.compose.bom))

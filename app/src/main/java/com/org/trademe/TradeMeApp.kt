@@ -2,6 +2,7 @@ package com.org.trademe
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Person
@@ -64,6 +65,11 @@ fun TradeMeApp(
             NavigationRoutes.WATCHLIST_ROUTE
         ),
         TabItem(
+            stringResource(R.string.todo),
+            Icons.Default.CheckCircle,
+            NavigationRoutes.TODO_ROUTE
+        ),
+        TabItem(
             stringResource(R.string.my_trade_me),
             Icons.Default.Person,
             NavigationRoutes.PROFILE_ROUTE
@@ -91,7 +97,8 @@ fun TradeMeApp(
                         text = when (selectedTab) {
                             0 -> stringResource(R.string.latest_listings)
                             1 -> stringResource(R.string.watchlist)
-                            2 -> stringResource(R.string.my_trade_me)
+                            2 -> stringResource(R.string.todo_list)
+                            3 -> stringResource(R.string.my_trade_me)
                             else -> stringResource(R.string.trade_me)
                         },
                         style = MaterialTheme.typography.titleLarge,

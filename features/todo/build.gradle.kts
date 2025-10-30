@@ -1,23 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.library")
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
     id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.org.trademe"
-    compileSdk = 35
+    namespace = "com.org.trademe.todo"
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.org.trademe"
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.compileSdk.get().toInt()
-        versionCode = libs.versions.versionCode.get().toInt()
-        versionName = libs.versions.versionName.get()
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -43,35 +38,25 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtensionVersion.get()
     }
-    packaging {
 
-        resources {
-            merges += "META-INF/gradle/incremental.annotation.processors"
-            excludes += "META-INF/gradle/incremental.annotation.processors"
-            excludes += "META-INF/LICENSE.md"
-
-        }
-    }
 }
 
 dependencies {
     implementation(project(":core"))
     implementation(project(":navigation"))
-    implementation(project(":features:listings"))
-    implementation(project(":features:watchlist"))
-    implementation(project(":features:profile"))
-    implementation(project(":features:todo"))
 
     kapt(libs.hilt.compiler)
-
-    // Include bundles
+    kapt(libs.androidx.room.compiler)
     implementation(libs.bundles.androidx.core)
     implementation(libs.bundles.androidx.compose.ui)
     implementation(libs.bundles.hilt)
+    implementation(libs.bundles.room)
 
     // Compose BOM and other dependencies
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
-    implementation(libs.coil.compose)
-
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
 }
+
